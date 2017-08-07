@@ -3,11 +3,8 @@ package com.cdi.crud.infra.util;
 
 
 import java.io.Serializable;
-import java.text.MessageFormat;
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
-import java.util.MissingResourceException;
 
 /**
  * Created by rafael-pestano on 10/06/2014.

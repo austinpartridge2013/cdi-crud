@@ -24,6 +24,7 @@ import java.util.List;
  */
 @Stateless
 public class CarService extends CrudService<Car> {
+	private static final long serialVersionUID = 0L;
 
 
     @TransactionAttribute(TransactionAttributeType.SUPPORTS)

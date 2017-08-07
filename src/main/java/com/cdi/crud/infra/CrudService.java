@@ -21,6 +21,7 @@ import java.util.List;
  */
 @Dependent
 public abstract class CrudService<T extends BaseEntity> implements Serializable {
+	private static final long serialVersionUID = 0L;
 
     @Inject
     private Crud<T> crud;

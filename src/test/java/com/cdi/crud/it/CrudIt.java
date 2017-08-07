@@ -1,13 +1,15 @@
 package com.cdi.crud.it;
 
-import com.cdi.crud.infra.Crud;
-import com.cdi.crud.model.Car;
-import com.cdi.crud.service.CarService;
-import com.cdi.crud.infra.exception.CustomException;
-import com.cdi.crud.infra.model.Filter;
-import com.cdi.crud.infra.model.SortOrder;
-import com.cdi.crud.infra.security.CustomAuthorizer;
-import com.cdi.crud.util.Deployments;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.inject.Inject;
+
 import org.hibernate.criterion.MatchMode;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -21,12 +23,14 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import javax.inject.Inject;
-import java.util.Arrays;
-import java.util.List;
-import java.util.logging.Logger;
-
-import static org.junit.Assert.*;
+import com.cdi.crud.infra.Crud;
+import com.cdi.crud.infra.exception.CustomException;
+import com.cdi.crud.infra.model.Filter;
+import com.cdi.crud.infra.model.SortOrder;
+import com.cdi.crud.infra.security.CustomAuthorizer;
+import com.cdi.crud.model.Car;
+import com.cdi.crud.service.CarService;
+import com.cdi.crud.util.Deployments;
 
 /**
  * Created by rmpestano on 9/7/14.

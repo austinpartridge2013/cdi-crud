@@ -18,7 +18,8 @@ import java.io.Serializable;
 @RestSecured
 @Interceptor
 public class RestSecuredImpl implements Serializable{
-
+	private static final long serialVersionUID = 0L;
+	
     @Inject
     CustomAuthorizer authorizer;
 

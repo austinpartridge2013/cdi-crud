@@ -173,7 +173,7 @@ public class CrudRestIt {
         carToCreate.add("model", new JsonPrimitive("new car"));
         carToCreate.add("name", new JsonPrimitive("new car name"));
         carToCreate.add("price", new JsonPrimitive(1000f));
-        String result = given().
+        given().
                 content(carToCreate.toString()).
                 contentType("application/json").
         when().

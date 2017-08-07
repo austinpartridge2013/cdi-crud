@@ -6,7 +6,6 @@ package com.cdi.crud.infra;
 
 
 import com.cdi.crud.infra.model.BaseEntity;
-import com.cdi.crud.infra.util.Assert;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.*;

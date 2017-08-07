@@ -7,6 +7,7 @@ import javax.ejb.ApplicationException;
  */
 @ApplicationException(rollback = true)
 public class CustomException extends RuntimeException{
+	private static final long serialVersionUID = 0L;
 
     public CustomException(String msg) {
         super(msg);

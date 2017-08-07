@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(value = XmlAccessType.FIELD)
 public class Car implements BaseEntity {
+	private static final long serialVersionUID = 0L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

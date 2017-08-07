@@ -4,26 +4,27 @@
  */
 package com.cdi.crud.bean;
 
-import com.cdi.crud.infra.CrudService;
-import com.cdi.crud.model.Car;
-import com.cdi.crud.service.CarService;
-import com.cdi.crud.infra.Crud;
-import com.cdi.crud.infra.exception.CustomException;
-import com.cdi.crud.infra.model.Filter;
+import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import org.apache.deltaspike.core.api.scope.ViewAccessScoped;
 import org.primefaces.event.SelectEvent;
 import org.primefaces.event.UnselectEvent;
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;
 
-import javax.annotation.PostConstruct;
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
-import javax.inject.Inject;
-import javax.inject.Named;
-import java.io.Serializable;
-import java.util.List;
-import java.util.Map;
+import com.cdi.crud.infra.Crud;
+import com.cdi.crud.infra.CrudService;
+import com.cdi.crud.infra.exception.CustomException;
+import com.cdi.crud.infra.model.Filter;
+import com.cdi.crud.model.Car;
+import com.cdi.crud.service.CarService;
 
 /**
  * @author rmpestano
@@ -31,6 +32,7 @@ import java.util.Map;
 @Named
 @ViewAccessScoped
 public class CarBean implements Serializable {
+	private static final long serialVersionUID = 0L;
 
     private LazyDataModel<Car> carList;
     private List<Car> filteredValue;// datatable filteredValue attribute
@@ -59,6 +61,8 @@ public class CarBean implements Serializable {
             // usually in an utility or super class cause this code is always
             // the same
             carList = new LazyDataModel<Car>() {
+            	private static final long serialVersionUID = 0L;
+            	
                 @Override
                 public List<Car> load(int first, int pageSize,
                                       String sortField, SortOrder sortOrder,

@@ -1,19 +1,12 @@
 package com.cdi.crud.ft;
 
-import com.cdi.crud.bean.CarBean;
-import com.cdi.crud.ft.pages.LogonDialog;
-import com.cdi.crud.util.DBUnitUtils;
-import com.cdi.crud.ft.pages.IndexPage;
-import com.cdi.crud.util.Deployments;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import cucumber.runtime.arquillian.ArquillianCucumber;
-import cucumber.runtime.arquillian.api.Features;
-import cucumber.runtime.arquillian.api.Tags;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.jboss.arquillian.graphene.Graphene.waitModel;
+import static org.junit.Assert.assertEquals;
+
+import java.io.File;
+import java.net.URL;
+
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.arquillian.graphene.Graphene;
@@ -36,13 +29,21 @@ import org.jboss.shrinkwrap.resolver.api.maven.MavenResolverSystem;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import java.io.File;
-import java.net.URL;
+import com.cdi.crud.bean.CarBean;
+import com.cdi.crud.ft.pages.IndexPage;
+import com.cdi.crud.ft.pages.LogonDialog;
+import com.cdi.crud.util.DBUnitUtils;
+import com.cdi.crud.util.Deployments;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.jboss.arquillian.graphene.Graphene.waitModel;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import cucumber.runtime.arquillian.ArquillianCucumber;
+import cucumber.runtime.arquillian.api.Features;
+import cucumber.runtime.arquillian.api.Tags;
 
 /**
  * Car acceptance tests

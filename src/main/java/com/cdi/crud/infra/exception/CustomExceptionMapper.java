@@ -15,7 +15,7 @@ public class CustomExceptionMapper implements ExceptionMapper<CustomException> {
 
     @Override
     public Response toResponse(CustomException e) {
-        Map map = new HashMap();
+        Map<String, String> map = new HashMap<>();
         map.put("message", e.getMessage());
 
         if (e.getMessage().equals("Access forbidden")) {//TODO create specific exception and its mapper
